@@ -1,0 +1,18 @@
+.detail-icon {
+  cursor: pointer;
+  background-color: $grey-dark;
+  border-radius: 4px;
+
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &_selected {
+    background: $primary;
+
+    border: 2px solid $orange;
+    height: calc(100% - 4px);
+  }
+}

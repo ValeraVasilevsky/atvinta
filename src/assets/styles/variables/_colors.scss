@@ -1,0 +1,30 @@
+$orange-gradient: linear-gradient(180deg, #ff7f22 0%, #ff5722 100%);
+$orange-dark: #ff5722;
+$orange: #ff7f22;
+
+$grey: #4c5865;
+$grey-light: #7d90a6;
+$grey-lighter: #a3b8cc;
+$grey-dark: #333940;
+
+$blue-gradient: linear-gradient(90deg, #22b3e3 0%, #7cdaf9 52.6%, #22b3e3 100%);
+$webkit-blue-gradient: -webkit-linear-gradient(
+  90deg,
+  #22b3e3 0%,
+  #7cdaf9 52.6%,
+  #22b3e3 100%
+);
+$blue-hover: #7cdaf9;
+$blue-active: #22b3e3;
+
+$shadow: 0px 8px 10px 0px #00000029;
+$blue-hover-shadow: 0px 10px 40px 0px #1e5466;
+
+$white: #fff;
+$primary: #212529;
+$primary-dark: #1a1a1a;
+
+$bg-gradient: radial-gradient(82.33% 70.44% at 50% 0%, #26394d 0%, #212529 100%),
+  linear-gradient(0deg, #ffffff, #ffffff);
+
+$auxiliary: #667380;

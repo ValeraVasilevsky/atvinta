@@ -1,0 +1,28 @@
+.detail-card {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  &__img {
+    height: 128px;
+    width: 236px;
+    object-fit: cover;
+  }
+
+  &__title {
+    margin-top: 24px;
+    color: $white;
+  }
+  &__price {
+    margin-top: 4px;
+    color: $grey-lighter;
+  }
+  &__button {
+    width: $button-width;
+    margin-top: 24px;
+  }
+}

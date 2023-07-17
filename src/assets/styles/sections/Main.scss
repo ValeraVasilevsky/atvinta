@@ -1,0 +1,76 @@
+.main {
+  width: 100%;
+  max-width: $max-width-container-laptop;
+  height: 100vh;
+
+  display: flex;
+  place-items: center;
+
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  &__sidebar {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-direction: column;
+  }
+  &__text {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 24px;
+    font: {
+      family: "Montserrat";
+    }
+  }
+
+  &__title {
+    color: $white;
+  }
+  &__subtitle {
+    color: $grey-lighter;
+  }
+}
+
+@include desktop {
+  .main {
+    &__sidebar {
+      display: none;
+    }
+  }
+}
+
+@include tablet {
+  .main {
+    &__sidebar {
+      display: none;
+    }
+  }
+}
+
+@include mobile {
+  .main {
+    &__sidebar,
+    &__subtitle {
+      display: none;
+    }
+
+    &__content {
+      align-items: center;
+      flex-direction: column-reverse;
+      gap: 30px;
+    }
+    &__img {
+      width: 100%;
+      object-fit: cover;
+    }
+    &__title {
+      text-align: center;
+    }
+  }
+}

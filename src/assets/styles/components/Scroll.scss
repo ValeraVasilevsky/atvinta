@@ -1,0 +1,21 @@
+.scroll {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 8px;
+
+  &__text {
+    font: {
+      size: 12px;
+      weight: 500;
+    }
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    text-align: left;
+    color: $auxiliary;
+
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+}

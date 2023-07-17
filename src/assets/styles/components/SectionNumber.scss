@@ -1,0 +1,15 @@
+.section-number {
+  width: 24px;
+  height: 24px;
+  text-align: center;
+
+  &__text {
+    font: {
+      size: 12px;
+      weight: 500;
+    }
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    color: $auxiliary;
+  }
+}

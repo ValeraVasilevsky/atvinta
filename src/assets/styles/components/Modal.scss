@@ -1,0 +1,78 @@
+.modal {
+  position: fixed;
+  inset: 0;
+
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba($color: $primary-dark, $alpha: 0.67);
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $white;
+    border-radius: 10px;
+    position: relative;
+  }
+  &__close {
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+  &__body {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__title {
+    font: {
+      size: 18px;
+      weight: 600;
+    }
+    line-height: 24px;
+    text-align: center;
+    white-space: pre-wrap;
+    color: $primary;
+    width: 100%;
+  }
+  &__message {
+    font: {
+      size: 14px;
+      weight: 600;
+    }
+    line-height: 20px;
+    text-align: center;
+    white-space: pre-wrap;
+    color: $grey;
+    width: 100%;
+  }
+}
+
+.modal-enter-from,
+.modal-leave-to {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.modal-enter-from,
+.modal-leave-to > .modal__content {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.modal-enter-active,
+.modal-leave-active {
+  transition: all 0.3s;
+}
+
+.modal-enter-active,
+.modal-leave-active > .modal__content {
+  transition: all 0.3s;
+}

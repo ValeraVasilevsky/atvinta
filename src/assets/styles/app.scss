@@ -1,0 +1,29 @@
+.app {
+  background: $bg-gradient;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  position: relative;
+}
+
+@include desktop {
+  .app {
+    padding: 0px 64px;
+  }
+}
+
+@include tablet {
+  .app {
+    padding: 0px 48px;
+  }
+}
+
+@include mobile {
+  .app {
+    padding: 0px 42px;
+  }
+}

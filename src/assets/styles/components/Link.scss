@@ -1,0 +1,32 @@
+.link {
+  height: fit-content;
+  width: fit-content;
+  text-decoration: none;
+
+  color: rgba($color: $orange, $alpha: 0.5);
+  border-bottom: 1px solid rgba($color: $orange, $alpha: 0.5);
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .link {
+    &:hover {
+      color: $orange-dark;
+      border-bottom: 1px solid $orange-dark;
+    }
+    &:active {
+      color: $orange;
+      border: none;
+    }
+  }
+}
+
+@media (hover: none) {
+  .link {
+    &:active {
+      color: $orange;
+      border: none;
+    }
+  }
+}

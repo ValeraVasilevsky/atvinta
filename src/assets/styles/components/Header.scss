@@ -1,0 +1,55 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+
+  padding: 48px 0px;
+
+  &__button {
+    width: $button-width;
+  }
+}
+
+@include desktop-lg {
+  .header {
+    width: 100%;
+    max-width: $max-width-container-laptop;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@include desktop {
+  .header {
+    padding: 24px 64px;
+    left: 0;
+    right: 0;
+  }
+}
+
+@include tablet {
+  .header {
+    padding: 24px 48px;
+    left: 0;
+    right: 0;
+  }
+}
+
+@include mobile {
+  .header {
+    left: 0;
+    right: 0;
+    padding: 24px 42px;
+    justify-content: center;
+
+    &__logo {
+      display: none;
+    }
+    &__button {
+      width: 100%;
+    }
+  }
+}

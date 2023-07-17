@@ -1,0 +1,12 @@
+.robot {
+  width: 236px;
+  height: 320px;
+
+  background-color: transparent;
+  position: relative;
+
+  &__img {
+    position: absolute;
+    inset: 0;
+  }
+}

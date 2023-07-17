@@ -1,0 +1,168 @@
+$border: 2px;
+$border-radius: 60px;
+
+.button {
+  border: none;
+  outline: none;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  height: 48px;
+  width: fit-content;
+  position: relative;
+
+  padding: 12px auto;
+
+  border-radius: $border-radius;
+  cursor: pointer;
+
+  transition: all 0.2s ease-in;
+
+  &__text {
+    font: {
+      size: 16px;
+      weight: 600;
+    }
+    line-height: 24px;
+  }
+
+  &_fill,
+  &_stroke {
+    &_disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  &_fill {
+    &-orange {
+      box-shadow: $shadow;
+      color: $white;
+      background: $orange-gradient;
+      background: -webkit-#{$orange-gradient};
+    }
+    &_disabled {
+      background: $grey;
+      color: $grey-light;
+    }
+  }
+
+  &_stroke {
+    &-orange,
+    &-blue {
+      transition: all 0.2s ease-in;
+      border: $border solid;
+      background: transparent;
+      box-shadow: $shadow;
+    }
+
+    &_disabled {
+      border: $border solid $grey;
+      color: $grey-light;
+      background: transparent;
+    }
+
+    &-orange {
+      border-color: $orange;
+      color: $white;
+    }
+
+    &-blue {
+      border: $border solid $blue-active;
+
+      background: $webkit-blue-gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+@media (hover: hover) {
+  .button {
+    &_fill {
+      &-orange {
+        &:hover {
+          background: $orange-dark;
+          box-shadow: none;
+        }
+
+        &:active {
+          background-color: $orange;
+          box-shadow: none;
+        }
+      }
+    }
+
+    &_stroke {
+      &-orange {
+        &:hover {
+          background: $orange-dark;
+          border-color: $orange-dark;
+          box-shadow: none;
+        }
+
+        &:active {
+          background: $orange;
+          border-color: $orange;
+          box-shadow: none;
+        }
+      }
+
+      &-blue {
+        &:hover {
+          background: $blue-gradient;
+          border-color: $blue-hover;
+          box-shadow: $blue-hover-shadow;
+
+          -webkit-text-fill-color: $primary;
+        }
+
+        &:active {
+          background: transparent;
+          border-color: $blue-active;
+          color: $blue-hover;
+          box-shadow: none;
+
+          -webkit-text-fill-color: $blue-active;
+        }
+      }
+    }
+  }
+}
+
+@media (hover: none) {
+  .button {
+    &_fill {
+      &-orange {
+        &:active {
+          background-color: $orange;
+          box-shadow: none;
+        }
+      }
+    }
+
+    &_stroke {
+      &-orange {
+        &:active {
+          background: $orange;
+          border-color: $orange;
+          box-shadow: none;
+        }
+      }
+
+      &-blue {
+        &:active {
+          background: transparent;
+          border-color: $blue-active;
+          color: $blue-hover;
+          box-shadow: none;
+
+          -webkit-text-fill-color: $blue-active;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.storage-card {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  &__title {
+    margin-top: 24px;
+    color: $white;
+  }
+  &__price {
+    margin-top: 4px;
+    color: $grey-lighter;
+  }
+  &__button {
+    width: $button-width;
+    margin-top: 24px;
+  }
+  &__quantity {
+    margin-top: 15px;
+    color: $white;
+    font: {
+      size: 20px;
+      weight: 600;
+    }
+    line-height: 24px;
+  }
+}

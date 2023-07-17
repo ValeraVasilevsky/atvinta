@@ -1,0 +1,9 @@
+.section-title {
+  color: $white;
+}
+
+@include mobile {
+  .section-title {
+    text-align: center;
+  }
+}
